@@ -2,9 +2,9 @@ from django.conf import settings
 from edc_navbar import NavbarItem, site_navbars, Navbar
 
 
-no_url_namespace = True if settings.APP_NAME == 'grant_dashboard' else False
+no_url_namespace = True if settings.APP_NAME == 'grant_budget_dashboard' else False
 
-grant_dashboard = Navbar(name='grant_dashboard')
+grant_dashboard = Navbar(name='grant_budget_dashboard')
 
 grant_dashboard.append_item(
     NavbarItem(

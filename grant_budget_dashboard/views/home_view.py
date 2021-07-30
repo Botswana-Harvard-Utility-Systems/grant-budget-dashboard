@@ -5,6 +5,6 @@ from edc_navbar import NavbarViewMixin
 
 
 class HomeView(EdcBaseViewMixin, NavbarViewMixin, TemplateView):
-    template_name = 'grant_dashboard/home.html'
+    template_name = 'grant_budget_dashboard/home.html'
     navbar_name = 'grant'
     navbar_selected_item = 'home'
