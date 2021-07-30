@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+
+APP_NAME = 'grant_budget_dashboard'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -45,16 +48,18 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'edc_dashboard.middleware.DashboardMiddleware',
-    'edc_subject_dashboard.middleware.DashboardMiddleware',
+    # 'edc_dashboard.middleware.DashboardMiddleware',
+    # 'edc_subject_dashboard.middleware.DashboardMiddleware',
 ]
 
 ROOT_URLCONF = 'grant_budget_dashboard.urls'
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, '../templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
