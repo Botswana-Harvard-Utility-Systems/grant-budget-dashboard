@@ -8,20 +8,30 @@ grant_dashboard = Navbar(name='grant_dashboard')
 
 grant_dashboard.append_item(
     NavbarItem(
-        name='eligible_subject',
-        title='Subject Screening',
-        label='Subject Screening',
+        name='grants',
+        title='Grants',
+        label='Grants',
         fa_icon='fa fa-user-plus',
-        url_name=settings.DASHBOARD_URL_NAMES.get('screening_listboard_url'),
+        # url_name=settings.DASHBOARD_URL_NAMES.get('screening_listboard_url'),
         no_url_namespace=no_url_namespace))
 
 grant_dashboard.append_item(
     NavbarItem(
-        name='consented_subject',
-        title='Subjects',
-        label='Subjects',
+        name='staff_budget',
+        title='Staff Budget',
+        label='Staff Budget',
         fa_icon='fa fa-user-plus',
-        url_name=settings.DASHBOARD_URL_NAMES.get('subject_listboard_url'),
+        # url_name=settings.DASHBOARD_URL_NAMES.get('subject_listboard_url'),
+        no_url_namespace=no_url_namespace))
+
+
+grant_dashboard.append_item(
+    NavbarItem(
+        name='personnel_budget',
+        title='Personnel Budget',
+        label='Personnel Budget',
+        fa_icon='fa fa-user-plus',
+        # url_name=settings.DASHBOARD_URL_NAMES.get('subject_listboard_url'),
         no_url_namespace=no_url_namespace))
 
 site_navbars.register(grant_dashboard)
