@@ -54,7 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'grant_budget_dashboard.urls'
 
-TEMPLATE_DIR = os.path.join(BASE_DIR, '../templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
     {
