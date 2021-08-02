@@ -1,25 +1,68 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
+
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+
+
+            <span class="navbar-brand hidden-sm">BHP Utility Systems Bhp Utility System </span>
+            <!-- <i class="fa fa-fire fa-fw"></i> --></span>
+
+
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+
+        <!-- begin class navbar -->
+        <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ProfileåΩ</a></li>
-                <li><a href="#">Help</a></li>
+
+                <li>
+                    <a href="">Staff Budget</a>
+                </li>
+                <li>
+                    <a href="">Personnel Budget</a>
+                </li>
+                <!-- begin rendered navbar item -->
+                <li id="li-topbar-home" class="active">
+                    <a title="Home" name="home" id="home" alt="" href="/">
+                        <i class="glyphicon glyphicon-home"></i>
+                    </a>
+                </li><!-- end rendered navbar item -->
+
+
+                <!-- begin rendered navbar item -->
+                <li id="li-topbar-administration">
+                    <a title="Administration" name="administration" id="administration" alt=""
+                       href="/administration/">
+                        <i class="glyphicon glyphicon-wrench"></i>
+
+
+                    </a>
+                </li><!-- end rendered navbar item -->
+
+
+                <!-- begin rendered navbar item -->
+                <li id="li-topbar-logout">
+                    <a title="Logout" name="logout" id="logout" alt="" href="/admin/logout/">
+                        <i class="glyphicon glyphicon-log-out"></i>
+                    </a>
+                </li><!-- end rendered navbar item -->
+
+
+                <li id="li-topbar-user-profile">
+                    <a title="user profile"
+                       href="/admin/auth/user/67/change/">mchawawa@bhp.org.bw</a>
+                    {# TODO: Get current useremail #}
+                </li>
+
             </ul>
-            <form class="navbar-form navbar-right">
-                <input type="text" class="form-control" placeholder="Search...">
-            </form>
-        </div>
+        </div> <!-- end class navbar -->
+
     </div>
 </nav>
