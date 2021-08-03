@@ -10,12 +10,15 @@
         {% endblock %}
     </title>
     {% include 'static_files.html' %}
+    {% block script %}
+    
+    {% endblock %}
 </head>
 <body>
 
 <div class="container-fluid">
+    {% include 'navbar.html' %}
     {% block content %}
-
 
     {% endblock %}
 </div>

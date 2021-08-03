@@ -1,117 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staffing Budget | Grant Management System</title>
-
-    <!-- To be used by the data table -->
-    <!-- Replace jquerry with a cdn link -->
-    <script src="./jquery.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css">
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+{% extends 'base.html' %}
 
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
-        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
-
-
-
-    <link rel="stylesheet" href="main.css">
-
+{% block script %}
     <script>
         $(document).ready(function () {
             $('#example').DataTable();
         });
     </script>
+{% endblock %}
 
-</head>
-
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
-
-                    <div class="navbar-header">
-
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-
-
-                        <span class="navbar-brand hidden-sm">BHP Utility Systems Bhp Utility System </span>
-                        <!-- <i class="fa fa-fire fa-fw"></i> --></span>
-
-
-                    </div>
-
-                    <!-- begin class navbar -->
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-
-                            <li>
-                                <a href="">Staff Budget</a>
-                            </li>
-                            <li>
-                                <a href="">Personnel Budget</a>
-                            </li>
-                            <!-- begin rendered navbar item -->
-                            <li id="li-topbar-home" class="active">
-                                <a title="Home" name="home" id="home" alt="" href="/">
-                                    <i class="glyphicon glyphicon-home"></i>
-                                </a>
-                            </li><!-- end rendered navbar item -->
-
-
-                            <!-- begin rendered navbar item -->
-                            <li id="li-topbar-administration">
-                                <a title="Administration" name="administration" id="administration" alt=""
-                                    href="/administration/">
-                                    <i class="glyphicon glyphicon-wrench"></i>
-
-
-
-                                </a>
-                            </li><!-- end rendered navbar item -->
-
-
-                            <!-- begin rendered navbar item -->
-                            <li id="li-topbar-logout">
-                                <a title="Logout" name="logout" id="logout" alt="" href="/admin/logout/">
-                                    <i class="glyphicon glyphicon-log-out"></i>
-                                </a>
-                            </li><!-- end rendered navbar item -->
-
-
-
-                            <li id="li-topbar-user-profile"><a title="user profile"
-                                    href="/admin/auth/user/67/change/">mchawawa@bhp.org.bw</a></li>
-
-                        </ul>
-                    </div> <!-- end class navbar -->
-
-                </div>
-            </nav>
-        </div>
-        <div class="row">
+{% block content %}
+<div class="row">
             <div class="col-lg-9">
                 <div class="table-space">
 
@@ -237,9 +137,4 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-</body>
-
-</html>
+{% endblock %}
